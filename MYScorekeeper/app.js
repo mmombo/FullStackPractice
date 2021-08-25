@@ -19,9 +19,9 @@ p1button.addEventListener("click", () => {
       isGameOver = true;
       p1button.disabled = true;
       p2button.disabled = true;
-      console.log(p1button.disabled);
+      p1score.classList.add("green");
+      p2score.classList.add("red");
     }
-
     p1score.textContent = p1counter;
   }
 });
@@ -34,6 +34,8 @@ p2button.addEventListener("click", () => {
       isGameOver = true;
       p2button.disabled = true;
       p1button.disabled = true;
+      p1score.classList.add("red");
+      p2score.classList.add("green");
     }
 
     p2score.textContent = p2counter;
@@ -50,6 +52,10 @@ function reset() {
   isGameOver = false;
   p1button.disabled = false;
   p2button.disabled = false;
+  p1score.classList.remove("red");
+  p1score.classList.remove("green");
+  p2score.classList.remove("red");
+  p2score.classList.remove("green");
 }
 
 scoreSelect.addEventListener("change", function () {
