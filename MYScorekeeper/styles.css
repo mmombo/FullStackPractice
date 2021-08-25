@@ -1,0 +1,25 @@
+#counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#imagecontainer {
+  width: 100%;
+}
+#imgcontainer #pic {
+  width: 100%;
+}
+
+#score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#score h1 {
+  font-size: 16px;
+  font-size: 4vw;
+  font-family: sans-serif;
+}
