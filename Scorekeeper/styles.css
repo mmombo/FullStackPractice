@@ -139,6 +139,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  min-width: 570px;
 }
 
 #counter {
@@ -157,8 +158,8 @@ body {
   width: 100%;
 }
 #imgcontainer #pic {
-  width: 100%;
-  max-width: 500px;
+  width: 35em;
+  height: auto;
   border-radius: 50px;
 }
 
@@ -171,7 +172,7 @@ body {
 #score h1 {
   padding: 25px 0;
   font-size: 16px;
-  font-size: 4vw;
+  font-size: 4rem;
   font-family: Bebas;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
@@ -183,8 +184,13 @@ body {
   justify-content: center;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
-  display: inline-block;
+  display: flex;
   padding: 0.7em 1.4em;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.15em;
@@ -217,9 +223,21 @@ body {
   top: 0.1em;
 }
 
-@media all and (max-width: 30em) {
-   a.button6 {
+@media all and (max-width: 570px) {
+   .btn {
     display: block;
     margin: 0.4em auto;
+  }
+
+  body {
+    background-color: #6c757d;
+  }
+  .button {
+    flex-direction: column;
+  }
+  #imgcontainer #pic {
+    width: 28em;
+    height: auto;
+    border-radius: 50px;
   }
 }
